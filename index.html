@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get a laugh with random jokes from the internet!</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Joke Display Area -->
+            <div class="joke-container">
+                <div class="joke-box">
+                    <div class="joke-type" id="jokeType">Setup & Punchline</div>
+                    <div class="joke-content" id="jokeContent">
+                        <p>Click "Get Joke" to start laughing! 😄</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Selection -->
+            <div class="category-section">
+                <label for="categorySelect"><strong>Select Category:</strong></label>
+                <select id="categorySelect">
+                    <option value="random">🎲 Random (All Categories)</option>
+                    <option value="general">🎯 General</option>
+                    <option value="programming">💻 Programming</option>
+                    <option value="knock-knock">🚪 Knock-Knock</option>
+                </select>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="button-group">
+                <button class="btn btn-primary" id="getJokeBtn">Get Joke 🎉</button>
+                <button class="btn btn-secondary" id="copyBtn">Copy to Clipboard 📋</button>
+                <button class="btn btn-tertiary" id="shareBtn">Share on Twitter 🐦</button>
+            </div>
+
+            <!-- Joke History -->
+            <div class="history-section">
+                <h2>📜 Recent Jokes</h2>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">No jokes yet. Generate one to see it here!</p>
+                </div>
+                <button class="btn btn-small" id="clearHistoryBtn">Clear History</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <a href="https://jokeapi.dev/" target="_blank">JokeAPI</a> | Made with ❤️ by Manish</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
